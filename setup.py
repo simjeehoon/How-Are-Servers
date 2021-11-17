@@ -8,7 +8,7 @@ setup(
     author_email     = 'simjeehoon@gmail.com',
     url              = 'https://github.com/simjeehoon/AutoChecker',
     download_url     = 'https://github.com/simjeehoon/AutoChecker/archive/master.zip',
-    install_requires = ['pandas', 'openpyxl', 'styleframe'],
+    install_requires = ['pandas', 'openpyxl', 'styleframe', 'paramiko'],
     packages         = find_packages(),
     keywords         = ['AutoChecker', 'autoChecker', 'auto_checker'],
     python_requires  = '>=3',
