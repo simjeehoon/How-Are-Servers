@@ -51,6 +51,9 @@ if __name__ == '__main__':
                 print("잘못된 입력.")
                 continue
             break
+
+    except SystemExit as e:
+        exit(e.code)
     except:
         log.critical(f"알 수 없는 오류 발생 {sys.exc_info()}")
         input()
