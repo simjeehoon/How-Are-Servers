@@ -10,11 +10,15 @@ if __name__ == '__main__':
 
         single_thread_mode = True
         show = True
+
+
         def thread_string(mode):
             if mode:
                 return "싱글"
             else:
                 return "멀티"
+
+
         while True:
             if show:
                 string = f"""Auto Checker 1.7
@@ -25,7 +29,7 @@ if __name__ == '__main__':
                 [5] 종료
                 """
                 print(string)
-                show=False
+                show = False
             userInput = input("입력: ").strip()
             if userInput == "1":
                 main.run(True, False, single_thread_mode)
@@ -39,7 +43,7 @@ if __name__ == '__main__':
                 else:
                     single_thread_mode = True
                 print(f"{thread_string(single_thread_mode)} 스레드 모드로 설정되었습니다.")
-                show=True
+                show = True
                 continue
             elif userInput == "5":
                 exit(0)
