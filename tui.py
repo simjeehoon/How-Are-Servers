@@ -1,6 +1,6 @@
 import sys
 
-from automatic_test import Main
+from automatic import Main
 import logManager as log
 
 if __name__ == '__main__':
@@ -43,6 +43,8 @@ if __name__ == '__main__':
                 else:
                     single_thread_mode = True
                 print(f"{thread_string(single_thread_mode)} 스레드 모드로 설정되었습니다.")
+                if not single_thread_mode:
+                    print(f"{main.config.thread_count}개의 쓰레드.")
                 show = True
                 continue
             elif userInput == "5":

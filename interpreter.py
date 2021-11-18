@@ -5,6 +5,7 @@ class Status(Enum):
     UNFINISHED = 0
     VALID_AND_CONTINUABLE = 1
     DONE = 2
+    PASS = 3
 
 
 class CustomInterpreter:

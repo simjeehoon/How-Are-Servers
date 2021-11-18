@@ -544,6 +544,10 @@ class Worker:
             status = custom_interpreter.get_status()
             if status == interpreter.Status.DONE:
                 break
+            if status == interpreter.Status.PASS:
+                self._retry = False
+                log.debug(f"[{index}] pass ")
+                return
 
         status = custom_interpreter.get_status()
         if status == interpreter.Status.UNFINISHED:
