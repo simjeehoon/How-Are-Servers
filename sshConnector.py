@@ -2,7 +2,7 @@ from typing import Optional
 
 import paramiko
 import time
-
+import encodings.idna
 
 class SshConnector:
     def connect(self, hostname: str, user_id: str, password: str,

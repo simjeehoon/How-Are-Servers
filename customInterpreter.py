@@ -461,7 +461,7 @@ class GoldiroxDb(CustomInterpreter):
             return "골디락스 DB ( X )"
 
 
-class NoRelated(CustomInterpreter):
+class NotRelated(CustomInterpreter):
     def __init__(self):
         super().__init__()
 
@@ -470,3 +470,11 @@ class NoRelated(CustomInterpreter):
 
     def values(self):
         return "해당사항 없음"
+
+
+class Pass(CustomInterpreter):
+    def __init__(self):
+        super().__init__()
+
+    def interpret_single_line(self, one_line: str):
+        self.status = Status.PASS
