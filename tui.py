@@ -48,7 +48,7 @@ if __name__ == '__main__':
                 show = True
                 continue
             elif userInput == "5":
-                exit(0)
+                break
             else:
                 print("잘못된 입력.")
                 continue
