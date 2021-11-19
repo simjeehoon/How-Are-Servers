@@ -1,20 +1,35 @@
-from setuptools import setup, find_packages
+from distutils.core import setup
+
+import py2exe, sys, os
+
+includes = [
+
+    "encodings",
+
+    "encodings.utf_8",
+
+]
+
+options = {
+
+    "bundle_files": 1,  # create singlefile exe
+
+    "compressed": 1,  # compress the library archive
+
+    "optimize": 2,  # do optimize
+
+    "dll_excludes": ["WSOCK32.dll", "USER32.dll", "ADVAPI32.dll", "SHELL32.dll", "KERNEL32.dll"],
+
+    "includes": includes,
+
+}
 
 setup(
-    name             = 'AutoChecker',
-    version          = '1.0.0',
-    description      = 'AutoChecker 1.0.0 Package for distribution',
-    author           = 'simjeehoon',
-    author_email     = 'simjeehoon@gmail.com',
-    url              = 'https://github.com/simjeehoon/AutoChecker',
-    download_url     = 'https://github.com/simjeehoon/AutoChecker/archive/master.zip',
-    install_requires = ['pandas', 'openpyxl', 'styleframe', 'paramiko'],
-    packages         = find_packages(),
-    keywords         = ['AutoChecker', 'autoChecker', 'auto_checker'],
-    python_requires  = '>=3',
-    zip_safe=False,
-    classifiers      = [
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6'
-    ]
+
+    options={"py2exe": options},
+
+    console=[{'script': "tui.py"}],
+
+    zipfile=None,
+
 )

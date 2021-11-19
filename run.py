@@ -1,6 +1,6 @@
 import sys
 
-from automatic import Main
+from automatic_exe import Main
 import logManager as log
 
 if __name__ == '__main__':
@@ -48,17 +48,17 @@ if __name__ == '__main__':
                 show = True
                 continue
             elif userInput == "5":
-                break
+                sys.exit(0)
             else:
                 print("잘못된 입력.")
                 continue
             break
 
     except SystemExit as e:
-        exit(e.code)
+        sys.exit(e.code)
     except:
         log.critical(f"알 수 없는 오류 발생 {sys.exc_info()}")
         input()
-        exit(-1)
+        sys.exit(-1)
     else:
         main.exit(0)
