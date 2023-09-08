@@ -665,7 +665,7 @@ class Main:
     def exit(self, code):
         input("종료하시려면 엔터를 누르세요.")
         log.info("프로그램 종료")
-        exit(code)
+        sys.exit(code)
 
     def run(self, with_save_txt: bool, with_interpreter: bool, single_thread_mode:bool):
         try:
