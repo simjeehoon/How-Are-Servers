@@ -165,25 +165,43 @@ df -h 명령어 입력 후 점유율이 10퍼센트가 넘는 경로들을 모�
 
 `config.json` 설명
 ---
-```json
-{
-  "default_port": 22,         // serverInfoList.xlsx에서 port를 지정하지 않을 경우 입력되는 기본 포트입니다.
-  "default_login_term": 0.5,  // serverInfoList.xlsx에서 login_term을 지정하지 않을 경우 입력되는 기본 로그인 대기 시간입니다. 초 단위입니다.
-  "default_stdout_term": 1,   // command file에서 stdout_term을 지정하지 않을 경우 입력되는 기본 대기 시간입니다. 초 단위입니다.
-  "default_encoding": "utf-8", // command file에서 encoding을 지정하지 않을 경우 적용되는 기본 캐릭터셋입니다. 
-  "ssh_timeout": 5,           // ssh로 접속했을 때 ssh_timeout초만큼 대기해도 응답이 없으면 해당 작업을 실패로 처리합니다.
-  "maximum_number_of_recollections": 3,   // interpret 과정중 UNFINISHED 상태일때 재해석을 몇회까지 할것인지 지정합니다.
-  "recollection_delay_time": 1,       // 재해석을 위해 recollection_delay_time초 만큼 기다리게 됩니다.
-  "info_list_extension": ".xlsx",     // serverInfoList의 파일 형식입니다. 현재는 xlsx만 됩니다.
-  "debug_mode": false,                // 디버그모드를 true로 하면 interpret 과정을 전부 표시합니다.
-  "file_instead_hostname": false,     // 네트워크 연결 대신 파일 입력을 바탕으로 처리합니다. serverInfoList의 hostname 열을 텍스트 파일 경로로 간주합니다. 
-  "thread_count": 8,                  // 최대 쓰레드 카운트입니다. 동시에 몇개의 연결을 수행할 것인지 결정합니다.
-  "forbidden_word_list": [            // 금지 명령어를 설정할 수 있습니다. 이 리스트에 포함된 단어가 명령어에 포함되면 해당 명령어는 수행되지 않습니다.
-    "if command includes the word in forbidden word list",
-    "the command won't be executed."
-  ]
-}
-```
+### `default_port`
+
+ serverInfoList.xlsx에서 port를 지정하지 않을 경우 입력되는 기본 포트입니다.
+### `default_login_term`
+
+ serverInfoList.xlsx에서 login_term을 지정하지 않을 경우 입력되는 기본 로그인 대기 시간입니다. 초 단위입니다.
+### `default_stdout_term`
+
+ command file에서 stdout_term을 지정하지 않을 경우 입력되는 기본 대기 시간입니다. 초 단위입니다.
+### `default_encoding`
+
+ command file에서 encoding을 지정하지 않을 경우 적용되는 기본 캐릭터셋입니다.
+### `ssh_timeout`
+
+ ssh로 접속했을 때 ssh_timeout초만큼 대기해도 응답이 없으면 해당 작업을 실패로 처리합니다.
+### `maximum_number_of_recollections`
+
+ interpret 과정중 UNFINISHED 상태일때 재해석을 몇회까지 할것인지 지정합니다.
+### `recollection_delay_time`
+
+ 재해석을 위해 recollection_delay_time초 만큼 기다리게 됩니다.
+### `info_list_extension`
+
+ serverInfoList의 파일 형식입니다. 현재는 xlsx만 됩니다.
+### `debug_mode`
+
+ 디버그모드를 true로 하면 interpret 과정을 전부 표시합니다.
+### `file_instead_hostname`
+
+ 네트워크 연결 대신 파일 입력을 바탕으로 처리합니다. serverInfoList의 hostname 열을 텍스트 파일 경로로 간주합니다.
+### `thread_count`
+
+ 최대 쓰레드 카운트입니다. 동시에 몇개의 연결을 수행할 것인지 결정합니다.
+### `forbidden_word_list`
+
+ 금지 명령어를 설정할 수 있습니다. 이 리스트에 포함된 단어가 명령어에 포함되면 해당 명령어는 수행되지 않습니다.
+
 
 `log.txt` 설명
 ---
