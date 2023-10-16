@@ -1,4 +1,4 @@
-How-is-Server
+How-Are-Servers
 ===
 배포 버전: 1.7
 
